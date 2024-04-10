@@ -4,6 +4,7 @@ from django.db.models import CharField, EmailField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
+
 class User(AbstractUser):
     """
     Default custom user model for Propylon Document Manager.
@@ -33,4 +34,5 @@ class User(AbstractUser):
 
 class FileVersion(models.Model):
     file_name = models.fields.CharField(max_length=512)
+    url = models.fields.CharField(max_length=2048, default="storage")
     version_number = models.fields.IntegerField()

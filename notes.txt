@@ -1,0 +1,27 @@
+## install virtualenv
+
+## use pip to install 
+pip install virtualenv
+#### you should set the virtualenv path if you get below warning
+WARNING: The script virtualenv is installed in '/home/fsusam/.local/bin' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+## use linux repo to install
+sudo apt install python3-virtualenv
+
+## activate virtual env
+source .env_python3.11/bin/activate
+
+## curl commands
+## create a new file
+curl -X POST http://localhost:8001/api/file_versions/ -H "Content-Type: application/json" -d '{"file_name": "test_file_name", "version_number": 1.0}'
+## get a file by id
+curl http://your-api-url/your-models/1/
+## get all files
+curl http://your-api-url/your-models/
+
+# run makemigrations and migrate if you add new field to model
+make makemigrations
+make migrate
+
+
