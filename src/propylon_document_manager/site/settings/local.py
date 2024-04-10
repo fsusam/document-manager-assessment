@@ -56,3 +56,5 @@ INSTALLED_APPS += ["django_extensions"]  # noqa: F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+MEDIA_URL='./storage/'
+MEDIA_ROOT = './storage/'
