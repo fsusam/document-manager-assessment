@@ -32,7 +32,11 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
+def get_upload_to(instance, filename):
+    return f"user_pk/{filename}"
+
 class FileVersion(models.Model):
     file_name = models.fields.CharField(max_length=512)
     url = models.fields.CharField(max_length=2048, default="storage")
     version_number = models.fields.IntegerField()
+    file = models.FileField(upload_to=get_upload_to, blank=True, null=True)
