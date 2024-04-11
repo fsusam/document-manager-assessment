@@ -6,3 +6,4 @@ class FileVersionSerializer(serializers.ModelSerializer):
     class Meta:
         model = FileVersion
         fields = "__all__"
+

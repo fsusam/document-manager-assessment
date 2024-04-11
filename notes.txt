@@ -24,4 +24,4 @@ curl http://your-api-url/your-models/
 make makemigrations
 make migrate
 
-
+## remove sqlite file if you want to clean db
