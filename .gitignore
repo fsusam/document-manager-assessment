@@ -278,6 +278,3 @@ propylon_document_manager/media/
 
 ### DB
 *.sqlite*
-
-### upload folder
-storage/*

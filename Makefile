@@ -8,6 +8,7 @@ VERBOSITY ?= 1
 export PYTHONPATH=.
 export DJANGO_SETTINGS_MODULE=propylon_document_manager.site.settings.local
 
+
 ifeq ($(OS),Windows_NT)
 	IN_ENV=. $(ENV_DIR)/Scripts/activate &&
 else
@@ -75,6 +76,9 @@ plain-serve:
 	$(IN_ENV) django-admin runserver 0.0.0.0:8001
 
 serve: build makemigrations migrate plain-serve
+
+createsuperuser:
+	$(IN_ENV)  django-admin createsuperuser
 
 # ============================
 # Database & Fixture Utilities
